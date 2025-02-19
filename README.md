@@ -11,7 +11,7 @@ Hosting: Netlify
 
 # Gallery
 
-![Portfolio Screenshot1](./Screenshot.jpg)
+![Portfolio Screenshot1](./Screenshot.png)
 
 <!-- ![Portfolio Screenshot2](./Screenshot-1.png) -->
 
