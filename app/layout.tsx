@@ -10,20 +10,18 @@ import { ViewProvider } from "@/contexts/ViewContext";
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Naufal Fahri — Fulltime Student",
+  title: "Naufal Fahri — Mahasiswa Penuh Waktu",
   description:
     "Data enthusiast who loves blending tech, design, and a touch of childhood nostalgia.",
-  keywords: [
-    "portfolio",
-  ],
-  
+  keywords: ["portofolio"],
+
   twitter: {
     card: "summary_large_image",
-    title: "--",
+    title: "Naufal Fahri — Portfolio",
     description:
-      "----",
-    creator: "----",
-    images: ["----"],
+      "Data enthusiast who loves blending tech, design, and a touch of childhood nostalgia.",
+    creator: "@naufalfahri",
+    images: ["/assets/preview-image.png"],
   },
   robots: {
     index: true,
@@ -34,7 +32,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  category: "technology",
+  category: "teknologi",
 };
 
 export default function RootLayout({

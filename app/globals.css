@@ -50,19 +50,18 @@
 }
 
 body {
-  background: #1a2a6c;
-  color: white;
+  background: #0f3d20; 
+  color:  #ffffff; 
+  
   overscroll-behavior: none;
 
   &::-webkit-scrollbar {
     width: 10px;
-    /* background-color: #d9d9d91f; /* Matches the theme */
-    background-color: #333;
+    background-color: #14532d;
   }
 
   &::-webkit-scrollbar-thumb {
-    /* background-color: #3c84c7; /* Matches the theme */
-    background-color: #666;
+    background-color: #1e7d43; 
     border-radius: 5px;
   }
 }
@@ -111,10 +110,10 @@ body {
 } */
 
 .custom-toast {
-  background-color: #b21f1f !important;
+  background-color: #14532d !important;
 
   .Toastify__progress-bar {
-    background-color: #FDBB;
+    background-color: #66bb6a;
   }
 }
 
