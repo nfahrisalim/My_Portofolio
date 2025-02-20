@@ -10,7 +10,7 @@ import { ViewProvider } from "@/contexts/ViewContext";
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Naufal Fahri — Mahasiswa Penuh Waktu",
+  title: "Naufal Fahri — Fulltime learner",
   description:
     "Data enthusiast who loves blending tech, design, and a touch of childhood nostalgia.",
   keywords: ["portofolio"],

@@ -135,10 +135,16 @@ export default function Contact() {
                 />
               </div>
               <div className="flex items-center h-full gap-2 w-full">
-                <form
+              <form
                   ref={formRef}
-                  onSubmit={handleSubmit(onSubmit)}
-                  className={`back w-full flex flex-col gap-3 grow-2 basis-0`}
+                  onSubmit={handleSubmit((data) => {
+                    const whatsappNumber = "6282187010625"; // Ganti 0 dengan 62 untuk format internasional
+                    const message = `Hello, my name is ${data.userName}. My email is ${data.userEmail}. Here is my message: ${data.userMessage}`;
+                    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                    
+                    window.open(whatsappUrl, "_blank");
+                  })}
+                  className="back w-full flex flex-col gap-3 grow-2 basis-0"
                 >
                   <div className="flex gap-1 flex-col">
                     <label
@@ -213,9 +219,10 @@ export default function Contact() {
                     )}
                   </div>
                   <button
-                    className={`rounded-md bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] py-3 px-5 ${syne.className} font-bold uppercase mt-4`}
+                    type="submit"
+                    className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 rounded-md"
                   >
-                    Send
+                    Send via WhatsApp
                   </button>
                 </form>
               </div>
