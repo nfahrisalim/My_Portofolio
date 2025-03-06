@@ -4,19 +4,20 @@ import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 
-export default function MobileMenu({
-  onMenuOpen,
-}: {
-  onMenuOpen: React.Dispatch<SetStateAction<boolean>>;
-}) {
-  const { sectionInView } = useView();
+interface MobileMenuProps {
+  onMenuOpen: React.Dispatch<SetStateAction<boolean>>; // Ensure it's correctly typed
+  className?: string; // Accepts className prop
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({ onMenuOpen, className }) => {
+  const { sectionInView } = useView(); // This will track the section in view
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="grid  z-10 items-center grid-cols-2 sm:hidden px-6 py-5 fixed top-12 rounded-2xl bg-linear-to-r from-[#d9d9d91f]  max-w-[90%] w-full to-[#7373731f] mt-12 sm:mt-16 std-backdrop-blur"
+      className={`grid z-10 items-center grid-cols-2 sm:hidden px-6 py-5 fixed top-12 rounded-2xl bg-linear-to-r from-[#d9d9d91f] max-w-[90%] w-full to-[#7373731f] mt-12 sm:mt-16 std-backdrop-blur ${className}`} // Added className here
     >
       <ul
         className="flex flex-col gap-4 lg:gap-12 text-white/25"
@@ -79,4 +80,6 @@ export default function MobileMenu({
       </div>
     </motion.div>
   );
-}
+};
+
+export default MobileMenu;
