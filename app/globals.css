@@ -5,19 +5,19 @@
 
   --background-image-image-radial: radial-gradient(
     circle,
-    #e3d3be 0%,
-    #e3d6c5 74%,
-    #ddccb8 100%
+    #2b2b2b 0%,
+    #1e1e1e 74%,
+    #131313 100%
   );
   --background-image-icon-radial: radial-gradient(
     circle,
-    rgba(217, 217, 217, 0.07) 0%,
-    rgba(217, 217, 217, 0.19) 100%
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.19) 100%
   );
   --background-image-translucent-gradient: linear-gradient(
-    to-right,
-    #d9d9d91f 0%,
-    #7373731f 100%
+    to right,
+    #ffffff0f 0%,
+    #9999991f 100%
   );
   --background-image-gradient-conic: conic-gradient(
     from 180deg at 50% 50%,
@@ -27,21 +27,13 @@
   --breakpoint-smm: 435px;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-gray-800, currentColor);
   }
 }
 
@@ -50,18 +42,18 @@
 }
 
 body {
-  background: #0f3d20; 
-  color:  #ffffff; 
+  background: #0a0a0a; 
+  color: #e6e6e6; 
   
   overscroll-behavior: none;
 
   &::-webkit-scrollbar {
     width: 10px;
-    background-color: #14532d;
+    background-color: #1a1a1a;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #1e7d43; 
+    background-color: #3a3a3a; 
     border-radius: 5px;
   }
 }
@@ -72,8 +64,6 @@ body {
   -webkit-mask-size: 390px 390px;
   -webkit-mask-repeat: no-repeat;
   z-index: -10;
-  /* transform: rotate(-15deg); */
-  /* Since I cannot achieve the particular effect I wanted to create, I can make it scroll */
 }
 
 @media (max-width: 1280px) {
@@ -100,20 +90,11 @@ body {
   transform-style: preserve-3d;
 }
 
-/* .card.flipped,
-.card .back {
-  transform: perspective(300px) rotateY(180deg);
-} */
-
-/* .card .back {
-  transition: opacity 0.3s ease 1s;
-} */
-
 .custom-toast {
-  background-color: #14532d !important;
+  background-color: #1a1a1a !important;
 
   .Toastify__progress-bar {
-    background-color: #66bb6a;
+    background-color: #666;
   }
 }
 

@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <>
       <div className="fixed max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none">
-        <div className="flex justify-between items-center px-6 py-4 rounded-2xl bg-[rgba(20,83,45,0.85)] sm:bg-linear-to-r sm:from-[#d9d9d91f] sm:to-[#7373731f] mt-4 sm:mt-8 backdrop-blur-md">
+        <div className="flex justify-between items-center px-6 py-4 rounded-2xl bg-[rgba(10,10,10,0.85)] sm:bg-linear-to-r sm:from-[#ffffff1f] sm:to-[#7373731f] mt-4 sm:mt-8 backdrop-blur-md">
           <Image
             src="/dissent-logo.svg"
             width={32}
@@ -28,7 +28,7 @@ export default function Header() {
             icon={`${menuOpen ? "gg:close" : "lucide:menu"}`}
           />
 
-          <ul className="hidden sm:flex gap-8 lg:gap-12 text-white/25">
+          <ul className="hidden sm:flex gap-8 lg:gap-12 text-white/50 hover:text-white">
             <Link
               href="#home"
               className={`${sectionInView === "home" && "text-white"} `}
@@ -56,20 +56,25 @@ export default function Header() {
           </ul>
           <div className="gap-5 text-xl hidden sm:flex">
             <Link target="_blank" href="https://linkedin.com/in/nfahrisalim">
-              <Icon icon="hugeicons:linkedin-01" />
+              <Icon icon="hugeicons:linkedin-01" className="text-white/60 hover:text-white" />
             </Link>
             <Link target="_blank" href="https://github.com/nfahrisalim">
-              <Icon icon="hugeicons:github" />
+              <Icon icon="hugeicons:github" className="text-white/60 hover:text-white" />
             </Link>
             <Link target="_blank" href="https://www.instagram.com/nfahrisalim/">
-              <Icon icon="akar-icons:instagram-fill" />
+              <Icon icon="akar-icons:instagram-fill" className="text-white/60 hover:text-white" />
             </Link>
           </div>
         </div>
       </div>
 
       <AnimatePresence>
-        {menuOpen && <MobileMenu onMenuOpen={setMenuOpen} />}
+        {menuOpen && (
+          <MobileMenu 
+            onMenuOpen={setMenuOpen}
+            className="backdrop-blur-md bg-[rgba(0,0,0,0.85)] text-white"
+          />
+        )}
       </AnimatePresence>
     </>
   );
